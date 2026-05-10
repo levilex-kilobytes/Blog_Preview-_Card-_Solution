@@ -24,8 +24,8 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/levilex-kilobytes/Blog_Preview-_Card-_Solution
+- Live Site URL: https://blog-preview-card-solution-umber.vercel.app/
 
 ## My process
 
