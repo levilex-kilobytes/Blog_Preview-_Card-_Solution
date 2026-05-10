@@ -3,58 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Blog Preview Card</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
   </head>
   <body>
-    <main class="page">
+    <main>
       <article class="card">
-        <a href="#" class="card__image-link">
-          <img
-            class="card__image"
-            src="./assets/images/illustration-article.svg"
-            alt="HTML & CSS foundations illustration"
-          />
-        </a>
+        <img
+          src="./assets/images/illustration-article.svg"
+          alt="Article Illustration"
+          class="card-image"
+        />
+        <p class="card-tag">Learning</p>
 
-        <div class="card__body">
-          <a href="#" class="card__tag">Learning</a>
+        <p class="card-date">Published 21 Dec 2023</p>
 
-          <p class="card__date">Published 21 Dec 2023</p>
+        <h1 class="card-title">HTML & CSS foundations</h1>
 
-          <a href="#" class="card__title-link">
-            <h1 class="card__title">HTML &amp; CSS foundations</h1>
-          </a>
+        <p class="card-description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
 
-          <p class="card__text">
-            These languages are the backbone of every website, defining
-            structure, content, and presentation.
-          </p>
-
-          <div class="card__author author">
-            <img
-              class="author__avatar"
-              src="./assets/images/image-avatar.webp"
-              alt="Greg Hooper avatar"
-              width="40"
-              height="40"
-            />
-            <span class="author__name">Greg Hooper</span>
-          </div>
+        <div class="card-author">
+          <img src="./assets/images/image-avatar.webp" alt="Greg Hooper" />
+          <span><strong> Hooper</strong></span>
         </div>
       </article>
     </main>
-
     <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a
-      >. Coded by <a href="#">You</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">levi</a>.
     </footer>
   </body>
 </html>
