@@ -166,11 +166,11 @@
 
 @media (min-width: 25em) {
   .card__body {
-    padding: 1.5rem;
+    padding: clamp(1.25rem, 4vw, 1.5rem);
   }
 
   .card__title {
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
   }
 }
 
