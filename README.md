@@ -1,6 +1,6 @@
 # Frontend Mentor - Blog Preview Card Solution
 
-This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS).
+This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -40,63 +40,65 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### What I learned
 
-I learned how to apply BEM naming convention properly, separating
-blocks, elements, and modifiers clearly:
+This project helped me understand **CSS Custom Properties (Variables)** and how they make code easier to maintain. Instead of repeating the same color or value everywhere, I define it once in `:root` and reuse it throughout the stylesheet.
+
+```css
+:root {
+  --color-yellow: #f4d03f;
+  --shadow: 4px 4px 0px var(--color-black);
+}
+
+.card {
+  box-shadow: var(--shadow);
+}
+
+.card__tag {
+  background-color: var(--color-yellow);
+}
+```
+
+I also practiced **BEM naming convention** to keep my HTML and CSS organized:
 
 ```html
 <article class="card">
   <div class="card__body">
-    <h1 class="card__title">HTML & CSS foundations</h1>
+    <h2 class="card__title">HTML & CSS foundations</h2>
+    <p class="card__text">These languages are the backbone...</p>
   </div>
 </article>
 ```
 
-I also learned how to use `clamp()` to make font sizes and spacing
-responsive without relying on many media queries:
+And I learned how to add **hover and focus states** for accessibility:
 
 ```css
---fs-title: clamp(1.1rem, 3vw, 1.25rem);
-```
+.card__title-link:hover .card__title {
+  color: var(--color-yellow);
+}
 
-And how to support users who prefer reduced motion:
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  .card {
-    transition: none;
-  }
+a:focus-visible {
+  outline: 2px solid var(--color-black);
+  outline-offset: 3px;
 }
 ```
 
 ### Continued development
 
-- CSS Grid for more complex layouts
-- Better accessibility practices (ARIA labels)
-- Learning `container queries` as an alternative to media queries
-- Improving Git workflow from the start of each project
+In future projects I want to focus on:
+
+- Getting more comfortable with CSS Grid for complex layouts
+- Learning more about accessibility (ARIA labels, keyboard navigation)
+- Practicing animations and transitions for smoother hover effects
+- Understanding when to use `rem` vs `px` for spacing and font sizes
 
 ### Useful resources
 
-- [MDN - clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) - Helped me understand how to use clamp() for fluid typography.
-- [BEM Methodology](https://getbem.com/) - Great reference for BEM naming.
-- [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Used for centering the card on the page.
-- [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) - Helped me handle motion accessibility correctly.
+- [MDN - CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - Helped me understand how CSS variables work and why `:root` is used.
+- [BEM Methodology](https://getbem.com/) - Great reference for understanding Block, Element, Modifier naming.
+- [CSS Tricks - Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Used this to center the card perfectly on the page.
 
 ### AI Collaboration
 
-I used **Claude (Anthropic)** throughout this project:
-
-- **BEM structure** — Claude helped refactor the original HTML to use
-  proper BEM naming across all elements.
-- **Accessibility fixes** — Claude identified and fixed issues like
-  missing `<h1>`, reduced motion support, and focus states.
-- **Responsive CSS** — Claude helped replace fixed `px` values with
-  `clamp()`, `min()`, and `rem` units for better responsiveness.
-- **Git workflow** — Claude helped fix repeated `git push` errors
-  caused by skipping `git add .` before committing.
-
-What worked well: Getting step-by-step explanations of _why_ each
-fix was needed, not just _what_ to change.
+- **Debugging** — When my CSS wasn't being applied, Claude helped me identify that the file path and file name had to match exactly.
 
 ## Author
 
@@ -105,6 +107,4 @@ fix was needed, not just _what_ to change.
 
 ## Acknowledgments
 
-Thanks to [Frontend Mentor](https://www.frontendmentor.io) for this
-challenge and to Claude (Anthropic) for guidance on accessibility,
-BEM, and responsive CSS best practices.
+Thanks to [Frontend Mentor](https://www.frontendmentor.io) for this challenge.
