@@ -35,27 +35,11 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 - CSS custom properties
 - BEM naming convention
 - Flexbox
-- Mobile-first workflow
 - Google Fonts (Figtree)
 
 ### What I learned
 
 This project helped me understand **CSS Custom Properties (Variables)** and how they make code easier to maintain. Instead of repeating the same color or value everywhere, I define it once in `:root` and reuse it throughout the stylesheet.
-
-```css
-:root {
-  --color-yellow: #f4d03f;
-  --shadow: 4px 4px 0px var(--color-black);
-}
-
-.card {
-  box-shadow: var(--shadow);
-}
-
-.card__tag {
-  background-color: var(--color-yellow);
-}
-```
 
 I also practiced **BEM naming convention** to keep my HTML and CSS organized:
 
